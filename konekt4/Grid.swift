@@ -8,36 +8,35 @@
 import Foundation
 
 class Grid: ObservableObject {
-    // initialized with 'empty squares'
-    @Published var grid: [[Int]] = [[0, 0, 0, 0, 0, 0, 0, 0],
-                         [0, 0, 0, 0, 0, 0, 0, 0],
-                         [0, 0, 0, 0, 0, 0, 0, 0],
-                         [0, 0, 0, 0, 0, 0, 0, 0],
-                         [0, 0, 0, 0, 0, 0, 0, 0],
-                         [0, 0, 0, 0, 0, 0, 0, 0],
-                         [0, 0, 0, 0, 0, 0, 0, 0],
-                         [0, 0, 0, 0, 0, 0, 0, 0]]
+    // initialized with integer n to make nxn grid
+    let n: Int
+    @Published var grid: [[Int]]
     
-    var rows: Int {
-        grid.count
+    init(n: Int = 8) {
+        self.n = n
+        self.grid = Array(repeating: Array(repeating: 0, count: n), count: n)
     }
     
-    var cols: Int {
-        grid[0].count
-    }
-    
-    /// This function checks a given 2D Int Array if there are n consecutive values of the same number for each element
-    ///
-    /// ```
-    /// checkGridForWinner() // True
-    /// ```
-    /// - Parameter grid: an m x n representation of a grid
-    /// - Returns: A bool representing if a winner was found (4 of the same element in a row) in the `grid`.
-    ///
+    /**
+    This method iterates through all elements of a grid and checks for a winner
+
+    - returns: Bool representing if a winner was found in the grid
+
+
+     # Notes: #
+     1. O(n) time and O(1) space
+
+     # Example #
+    ```
+     // var myGrid = Grid(n: 8)
+     // myGrid.checkGridForWinner()
+    ```
+
+    */
     func checkGridForWinner() -> Bool {
         // loop through all elements and check if grid contains a 'winner'
-        for r in 0..<rows {
-            for c in 0..<cols {
+        for r in 0..<n {
+            for c in 0..<n {
                 if checkSquareForWinner(r, c) { return true }
             }
         }
@@ -53,28 +52,28 @@ class Grid: ObservableObject {
         }
         
         // check horizontal
-        if c + 3 < cols {
+        if c + 3 < n {
             if currentElement == grid[r][c+1] && currentElement == grid[r][c+2] && currentElement == grid[r][c+3] {
                 return true
             }
         }
         
         // check vertical
-        if r + 3 < rows {
+        if r + 3 < n {
             if currentElement == grid[r+1][c] && currentElement == grid[r+2][c] && currentElement == grid[r+3][c] {
                 return true
             }
         }
         
         // check right diag
-        if r + 3 < rows && c + 3 < cols {
+        if r + 3 < n && c + 3 < n {
             if currentElement == grid[r+1][c+1] && currentElement == grid[r+2][c+2] && currentElement == grid[r+3][c+3] {
                 return true
             }
         }
         
         // check left diag
-        if r + 3 < rows && c - 3 >= 0 {
+        if r + 3 < n && c - 3 >= 0 {
             if currentElement == grid[r+1][c-1] && currentElement == grid[r+2][c-2] && currentElement == grid[r+3][c-3] {
                 return true
             }
