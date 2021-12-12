@@ -28,7 +28,7 @@ class Grid: ObservableObject {
 
      # Example #
     ```
-     // var myGrid = Grid(n: 8)
+     // var myGrid = Grid()
      // myGrid.checkGridForWinner()
     ```
 

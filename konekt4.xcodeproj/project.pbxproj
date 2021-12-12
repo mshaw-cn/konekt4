@@ -12,7 +12,18 @@
 		0655E7D927602F8B000EAC01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655E7D827602F8B000EAC01 /* ContentView.swift */; };
 		0655E7DB27602F8D000EAC01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0655E7DA27602F8D000EAC01 /* Assets.xcassets */; };
 		0655E7DE27602F8D000EAC01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0655E7DD27602F8D000EAC01 /* Preview Assets.xcassets */; };
+		06FD40242766936B00CFF0F2 /* GridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD40232766936B00CFF0F2 /* GridTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06FD401C276692A200CFF0F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0655E7CB27602F8B000EAC01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0655E7D227602F8B000EAC01;
+			remoteInfo = konekt4;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0638664C276199E800237539 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
@@ -21,10 +32,19 @@
 		0655E7D827602F8B000EAC01 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0655E7DA27602F8D000EAC01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0655E7DD27602F8D000EAC01 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		06FD4018276692A200CFF0F2 /* konekt4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = konekt4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06FD40232766936B00CFF0F2 /* GridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0655E7D027602F8B000EAC01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06FD4015276692A200CFF0F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				0655E7D527602F8B000EAC01 /* konekt4 */,
+				06FD4019276692A200CFF0F2 /* konekt4Tests */,
 				0655E7D427602F8B000EAC01 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				0655E7D327602F8B000EAC01 /* konekt4.app */,
+				06FD4018276692A200CFF0F2 /* konekt4Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +92,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		06FD4019276692A200CFF0F2 /* konekt4Tests */ = {
+			isa = PBXGroup;
+			children = (
+				06FD40232766936B00CFF0F2 /* GridTests.swift */,
+			);
+			path = konekt4Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,6 +120,24 @@
 			productReference = 0655E7D327602F8B000EAC01 /* konekt4.app */;
 			productType = "com.apple.product-type.application";
 		};
+		06FD4017276692A200CFF0F2 /* konekt4Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06FD401E276692A200CFF0F2 /* Build configuration list for PBXNativeTarget "konekt4Tests" */;
+			buildPhases = (
+				06FD4014276692A200CFF0F2 /* Sources */,
+				06FD4015276692A200CFF0F2 /* Frameworks */,
+				06FD4016276692A200CFF0F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06FD401D276692A200CFF0F2 /* PBXTargetDependency */,
+			);
+			name = konekt4Tests;
+			productName = konekt4Tests;
+			productReference = 06FD4018276692A200CFF0F2 /* konekt4Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -102,6 +150,11 @@
 				TargetAttributes = {
 					0655E7D227602F8B000EAC01 = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					06FD4017276692A200CFF0F2 = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
+						TestTargetID = 0655E7D227602F8B000EAC01;
 					};
 				};
 			};
@@ -119,6 +172,7 @@
 			projectRoot = "";
 			targets = (
 				0655E7D227602F8B000EAC01 /* konekt4 */,
+				06FD4017276692A200CFF0F2 /* konekt4Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +184,13 @@
 			files = (
 				0655E7DE27602F8D000EAC01 /* Preview Assets.xcassets in Resources */,
 				0655E7DB27602F8D000EAC01 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06FD4016276692A200CFF0F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +207,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		06FD4014276692A200CFF0F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06FD40242766936B00CFF0F2 /* GridTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06FD401D276692A200CFF0F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0655E7D227602F8B000EAC01 /* konekt4 */;
+			targetProxy = 06FD401C276692A200CFF0F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0655E7DF27602F8D000EAC01 /* Debug */ = {
@@ -325,6 +402,57 @@
 			};
 			name = Release;
 		};
+		06FD401F276692A200CFF0F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZB32KP6BS9;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = digital.crowsnest.konekt4Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "konekt4Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/konekt4.app/konekt4";
+			};
+			name = Debug;
+		};
+		06FD4020276692A200CFF0F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZB32KP6BS9;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = digital.crowsnest.konekt4Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "konekt4Tests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/konekt4.app/konekt4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -342,6 +470,15 @@
 			buildConfigurations = (
 				0655E7E227602F8D000EAC01 /* Debug */,
 				0655E7E327602F8D000EAC01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06FD401E276692A200CFF0F2 /* Build configuration list for PBXNativeTarget "konekt4Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06FD401F276692A200CFF0F2 /* Debug */,
+				06FD4020276692A200CFF0F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
